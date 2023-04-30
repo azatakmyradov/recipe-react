@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	font-family: Roboto, sans-serif;
+}
+
+.ingredient-input {
+	@apply transition duration-200 w-full py-3 px-2 rounded outline-none bg-primary text-slate-200 shadow placeholder-red-400 active:shadow-lg focus:shadow-lg;
+}
+
+.ingredient-item {
+	@apply flex justify-between text-lg py-2 px-2;
+}
+
+.nav-link {
+	@apply transition duration-200;
+	@apply w-full block text-center mt-6 rounded shadow py-4;
+	@apply bg-secondary hover:bg-secondary-light;
+}
+
+.recipe-item {
+	@apply py-3 px-2 border border-red-400 rounded shadow-lg cursor-pointer;
+	@apply transition duration-200 hover:bg-red-900;
+}
