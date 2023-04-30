@@ -42,11 +42,11 @@ function App() {
 
     return (
         <>
-            <label htmlFor="ingredient">
-                <h1 className="text-xl font-bold">
+            {/* <label htmlFor="ingredient">
+                <h1 className="text-md font-bold">
                     Let&apos;s start with the ingredients...
                 </h1>
-            </label>
+            </label> */}
             <form action="#" onSubmit={handleSubmit}>
                 <input
                     type="text"
