@@ -8,6 +8,11 @@
 	font-family: Roboto, sans-serif;
 }
 
+body {
+	min-height: 100vh !important;
+    min-height: -webkit-fill-available !important;
+}
+
 .ingredient-input {
 	@apply transition duration-200;
 	@apply w-full py-3 px-2 rounded outline-none;
