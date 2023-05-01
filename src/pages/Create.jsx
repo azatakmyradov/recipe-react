@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Watch } from 'react-loader-spinner';
 import RecipeSteps from '../components/RecipeSteps';
 
@@ -13,6 +13,7 @@ export default function Create() {
     const products = ingredients.map(ingredient => {
         return ingredient.name;
     });
+    let navigate = useNavigate();
 
     const getRecipe = event => {
         const name = event.target.textContent;
@@ -36,6 +37,10 @@ export default function Create() {
     };
 
     useEffect(() => {
+        if (ingredients.length < 5) {
+            navigate('/');
+        }
+
         axios
             .post('/recipe/list', {
                 products: products.join(', '),
